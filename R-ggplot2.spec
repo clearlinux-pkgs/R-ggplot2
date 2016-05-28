@@ -4,7 +4,7 @@
 #
 Name     : R-ggplot2
 Version  : 2.1.0
-Release  : 27
+Release  : 28
 URL      : http://cran.r-project.org/src/contrib/ggplot2_2.1.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/ggplot2_2.1.0.tar.gz
 Summary  : An Implementation of the Grammar of Graphics
@@ -13,8 +13,8 @@ License  : GPL-2.0
 Requires: R-scales
 Requires: R-gtable
 Requires: R-reshape2
-Requires: R-memoise
 Requires: R-sp
+Requires: R-memoise
 BuildRequires : R-gtable
 BuildRequires : R-memoise
 BuildRequires : R-reshape2
@@ -46,6 +46,7 @@ mkdir -p %{buildroot}/usr/lib64/R/library
 R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library ggplot2
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
+export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost
