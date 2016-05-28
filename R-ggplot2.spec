@@ -4,7 +4,7 @@
 #
 Name     : R-ggplot2
 Version  : 2.1.0
-Release  : 28
+Release  : 29
 URL      : http://cran.r-project.org/src/contrib/ggplot2_2.1.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/ggplot2_2.1.0.tar.gz
 Summary  : An Implementation of the Grammar of Graphics
@@ -14,9 +14,11 @@ Requires: R-scales
 Requires: R-gtable
 Requires: R-reshape2
 Requires: R-sp
-Requires: R-memoise
+Requires: R-maps
+Requires: R-mapproj
 BuildRequires : R-gtable
-BuildRequires : R-memoise
+BuildRequires : R-mapproj
+BuildRequires : R-maps
 BuildRequires : R-reshape2
 BuildRequires : R-scales
 BuildRequires : R-sp
