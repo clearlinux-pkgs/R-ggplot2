@@ -4,31 +4,29 @@
 #
 Name     : R-ggplot2
 Version  : 2.1.0
-Release  : 37
+Release  : 38
 URL      : http://cran.r-project.org/src/contrib/ggplot2_2.1.0.tar.gz
 Source0  : http://cran.r-project.org/src/contrib/ggplot2_2.1.0.tar.gz
 Summary  : An Implementation of the Grammar of Graphics
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-scales
-Requires: R-digest
-Requires: R-reshape2
 Requires: R-gtable
-Requires: R-sp
 Requires: R-maps
 Requires: R-multcomp
 Requires: R-quantreg
-BuildRequires : R-digest
+Requires: R-reshape2
+Requires: R-scales
+Requires: R-sp
+BuildRequires : R-evaluate
+BuildRequires : R-formatR
 BuildRequires : R-gtable
 BuildRequires : R-maps
+BuildRequires : R-markdown
 BuildRequires : R-multcomp
 BuildRequires : R-quantreg
 BuildRequires : R-reshape2
 BuildRequires : R-scales
 BuildRequires : R-sp
-BuildRequires : R-markdown
-BuildRequires : R-formatR
-BuildRequires : R-evaluate
 BuildRequires : clr-R-helpers
 
 %description
@@ -40,9 +38,15 @@ BuildRequires : clr-R-helpers
 %setup -q -c -n ggplot2
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
+export LANG=C
+export SOURCE_DATE_EPOCH=1492797496
 
 %install
 rm -rf %{buildroot}
+export SOURCE_DATE_EPOCH=1492797496
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -52,13 +56,13 @@ export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
-R CMD INSTALL --install-tests --build  -l %{buildroot}/usr/lib64/R/library ggplot2
+R CMD INSTALL --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} --build  -l %{buildroot}/usr/lib64/R/library ggplot2
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library ggplot2 || :
 
@@ -70,6 +74,7 @@ R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/lib
 /usr/lib64/R/library/ggplot2/INDEX
 /usr/lib64/R/library/ggplot2/Meta/Rd.rds
 /usr/lib64/R/library/ggplot2/Meta/data.rds
+/usr/lib64/R/library/ggplot2/Meta/features.rds
 /usr/lib64/R/library/ggplot2/Meta/hsearch.rds
 /usr/lib64/R/library/ggplot2/Meta/links.rds
 /usr/lib64/R/library/ggplot2/Meta/nsInfo.rds
