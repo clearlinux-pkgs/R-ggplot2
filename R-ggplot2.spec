@@ -4,7 +4,7 @@
 #
 Name     : R-ggplot2
 Version  : 2.2.1
-Release  : 41
+Release  : 43
 URL      : https://cran.r-project.org/src/contrib/ggplot2_2.2.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggplot2_2.2.1.tar.gz
 Summary  : Create Elegant Data Visualisations Using the Grammar of Graphics
@@ -12,12 +12,26 @@ Group    : Development/Tools
 License  : GPL-2.0
 Requires: R-gtable
 Requires: R-lazyeval
+Requires: R-maps
+Requires: R-multcomp
+Requires: R-plyr
+Requires: R-quantreg
+Requires: R-reshape2
+Requires: R-scales
+Requires: R-sp
 Requires: R-tibble
 BuildRequires : R-evaluate
 BuildRequires : R-formatR
 BuildRequires : R-gtable
 BuildRequires : R-lazyeval
+BuildRequires : R-maps
 BuildRequires : R-markdown
+BuildRequires : R-multcomp
+BuildRequires : R-plyr
+BuildRequires : R-quantreg
+BuildRequires : R-reshape2
+BuildRequires : R-scales
+BuildRequires : R-sp
 BuildRequires : R-tibble
 BuildRequires : clr-R-helpers
 
@@ -33,11 +47,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1493661482
+export SOURCE_DATE_EPOCH=1494023784
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1493661482
+export SOURCE_DATE_EPOCH=1494023784
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
