@@ -4,7 +4,9 @@ R-GGally
 R-Hmisc
 R-NMF
 R-R6
+R-RcmdrMisc
 R-SGP
+R-adegenet
 R-adephylo
 R-bayesplot
 R-benchr
@@ -18,12 +20,15 @@ R-cowplot
 R-crosstalk
 R-dendextend
 R-emmeans
+R-expsmooth
 R-forecast
 R-ggjoy
 R-ggridges
 R-gridExtra
 R-hdrcde
+R-joineRML
 R-latticeExtra
+R-lme4
 R-lmerTest
 R-magick
 R-mvoutlier
@@ -31,8 +36,11 @@ R-pdp
 R-phylogram
 R-plotly
 R-princurve
+R-rms
 R-rsample
 R-rstan
 R-seriation
+R-tidyverse
 R-tis
+R-vcdExtra
 R-viridis

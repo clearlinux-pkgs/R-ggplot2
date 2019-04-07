@@ -1,10 +1,13 @@
-3.1.0
+3.1.1
 R-gtable
 R-labeling
 R-lazyeval
+R-mapproj
 R-maps
 R-multcomp
 R-munsell
+R-pillar
+R-pkgconfig
 R-plyr
 R-quantreg
 R-reshape2
