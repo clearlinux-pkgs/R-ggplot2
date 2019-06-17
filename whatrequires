@@ -1,4 +1,5 @@
 # This file contains recursive sources that require this package
+R-DendSer
 R-EnvStats
 R-GGally
 R-Hmisc
@@ -6,8 +7,10 @@ R-NMF
 R-R6
 R-RcmdrMisc
 R-SGP
+R-StanHeaders
 R-adegenet
 R-adephylo
+R-afex
 R-bayesplot
 R-benchr
 R-brms
@@ -16,6 +19,7 @@ R-caret
 R-chron
 R-colorspace
 R-colourpicker
+R-corrgram
 R-cowplot
 R-crosstalk
 R-dendextend
@@ -35,8 +39,9 @@ R-mvoutlier
 R-pdp
 R-phylogram
 R-plotly
-R-princurve
+R-rasterVis
 R-rms
+R-robustbase
 R-rsample
 R-rstan
 R-seriation

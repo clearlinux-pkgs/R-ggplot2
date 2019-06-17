@@ -4,30 +4,16 @@
 #
 Name     : R-ggplot2
 Version  : 3.1.1
-Release  : 70
+Release  : 71
 URL      : https://cran.r-project.org/src/contrib/ggplot2_3.1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggplot2_3.1.1.tar.gz
 Summary  : Create Elegant Data Visualisations Using the Grammar of Graphics
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-gtable
-Requires: R-lazyeval
-Requires: R-mapproj
-Requires: R-maps
-Requires: R-multcomp
-Requires: R-munsell
-Requires: R-pillar
-Requires: R-pkgconfig
-Requires: R-plyr
-Requires: R-quantreg
-Requires: R-reshape2
-Requires: R-scales
-Requires: R-sp
-Requires: R-tibble
-Requires: R-viridisLite
 BuildRequires : R-evaluate
 BuildRequires : R-formatR
 BuildRequires : R-gtable
+BuildRequires : R-labeling
 BuildRequires : R-lazyeval
 BuildRequires : R-mapproj
 BuildRequires : R-maps
@@ -43,6 +29,7 @@ BuildRequires : R-scales
 BuildRequires : R-sp
 BuildRequires : R-tibble
 BuildRequires : R-viridisLite
+BuildRequires : R-withr
 BuildRequires : buildreq-R
 
 %description
@@ -63,10 +50,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554648988
+export SOURCE_DATE_EPOCH=1560791066
 
 %install
-export SOURCE_DATE_EPOCH=1554648988
+export SOURCE_DATE_EPOCH=1560791066
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
