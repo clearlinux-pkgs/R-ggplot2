@@ -1,9 +1,9 @@
 # This file contains recursive sources that require this package
-R-DendSer
 R-EnvStats
 R-GGally
 R-Hmisc
 R-NMF
+R-PerformanceAnalytics
 R-R6
 R-RcmdrMisc
 R-SGP
@@ -19,7 +19,6 @@ R-caret
 R-chron
 R-colorspace
 R-colourpicker
-R-corrgram
 R-cowplot
 R-crosstalk
 R-dendextend
