@@ -4,34 +4,31 @@
 #
 Name     : R-ggplot2
 Version  : 3.2.1
-Release  : 75
+Release  : 76
 URL      : https://cran.r-project.org/src/contrib/ggplot2_3.2.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggplot2_3.2.1.tar.gz
 Summary  : Create Elegant Data Visualisations Using the Grammar of Graphics
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-Hmisc
 Requires: R-digest
 Requires: R-gtable
 Requires: R-lazyeval
-Requires: R-mapproj
-Requires: R-maps
-Requires: R-multcomp
-Requires: R-quantreg
 Requires: R-reshape2
 Requires: R-rlang
 Requires: R-scales
-Requires: R-sp
 Requires: R-tibble
 Requires: R-viridisLite
 Requires: R-withr
 BuildRequires : R-Hmisc
+BuildRequires : R-RColorBrewer
 BuildRequires : R-digest
 BuildRequires : R-gtable
+BuildRequires : R-labeling
 BuildRequires : R-lazyeval
 BuildRequires : R-mapproj
 BuildRequires : R-maps
 BuildRequires : R-multcomp
+BuildRequires : R-munsell
 BuildRequires : R-quantreg
 BuildRequires : R-reshape2
 BuildRequires : R-rlang
@@ -41,6 +38,7 @@ BuildRequires : R-tibble
 BuildRequires : R-viridisLite
 BuildRequires : R-withr
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 # ggplot2 <img src="man/figures/logo.png" align="right" width="120" />
@@ -60,10 +58,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1565589038
+export SOURCE_DATE_EPOCH=1571837625
 
 %install
-export SOURCE_DATE_EPOCH=1565589038
+export SOURCE_DATE_EPOCH=1571837625
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
