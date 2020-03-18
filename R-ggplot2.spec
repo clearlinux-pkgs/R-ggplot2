@@ -4,34 +4,25 @@
 #
 Name     : R-ggplot2
 Version  : 3.3.0
-Release  : 79
+Release  : 80
 URL      : https://cran.r-project.org/src/contrib/ggplot2_3.3.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggplot2_3.3.0.tar.gz
 Summary  : Create Elegant Data Visualisations Using the Grammar of Graphics
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-Hmisc
 Requires: R-digest
 Requires: R-glue
 Requires: R-gtable
-Requires: R-mapproj
-Requires: R-maps
-Requires: R-multcomp
-Requires: R-quantreg
+Requires: R-isoband
 Requires: R-rlang
 Requires: R-scales
 Requires: R-sp
 Requires: R-tibble
 Requires: R-withr
-BuildRequires : R-Hmisc
 BuildRequires : R-digest
 BuildRequires : R-glue
 BuildRequires : R-gtable
 BuildRequires : R-isoband
-BuildRequires : R-mapproj
-BuildRequires : R-maps
-BuildRequires : R-multcomp
-BuildRequires : R-quantreg
 BuildRequires : R-rlang
 BuildRequires : R-scales
 BuildRequires : R-sp
@@ -40,14 +31,9 @@ BuildRequires : R-withr
 BuildRequires : buildreq-R
 
 %description
-# ggplot2 <img src="man/figures/logo.png" align="right" width="120" />
-[![Travis Build
-Status](https://travis-ci.org/tidyverse/ggplot2.svg?branch=master)](https://travis-ci.org/tidyverse/ggplot2)
-[![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/tidyverse/ggplot2?branch=master&svg=true)](https://ci.appveyor.com/project/tidyverse/ggplot2)
-[![Coverage
-Status](https://img.shields.io/codecov/c/github/tidyverse/ggplot2/master.svg)](https://codecov.io/github/tidyverse/ggplot2?branch=master)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/ggplot2)](https://cran.r-project.org/package=ggplot2)
+based on "The Grammar of Graphics". You provide the data, tell 'ggplot2'
+    how to map variables to aesthetics, what graphical primitives to use,
+    and it takes care of the details.
 
 %prep
 %setup -q -c -n ggplot2
@@ -57,10 +43,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1584492200
+export SOURCE_DATE_EPOCH=1584506637
 
 %install
-export SOURCE_DATE_EPOCH=1584492200
+export SOURCE_DATE_EPOCH=1584506637
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

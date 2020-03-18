@@ -1,4 +1,9 @@
 # This file contains build requirements that get picked up but are
 # undesirable. One entry per line, no whitespace.
+R-Hmisc
+R-mapproj
+R-maps
+R-multcomp
 R-profvis
+R-quantreg
 R-vdiffr
