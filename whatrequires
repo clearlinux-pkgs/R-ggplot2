@@ -9,7 +9,6 @@ R-benchr
 R-brms
 R-caret
 R-chron
-R-colorspace
 R-colourpicker
 R-cowplot
 R-dendextend
@@ -19,11 +18,9 @@ R-forecast
 R-ggjoy
 R-ggridges
 R-gridExtra
-R-gtable
 R-hdrcde
 R-joineRML
 R-latticeExtra
-R-lme4
 R-lmerTest
 R-pdp
 R-plotly
