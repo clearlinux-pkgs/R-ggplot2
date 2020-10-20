@@ -4,7 +4,7 @@
 #
 Name     : R-ggplot2
 Version  : 3.3.2
-Release  : 85
+Release  : 86
 URL      : https://cran.r-project.org/src/contrib/ggplot2_3.3.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggplot2_3.3.2.tar.gz
 Summary  : Create Elegant Data Visualisations Using the Grammar of Graphics
