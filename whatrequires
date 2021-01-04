@@ -10,9 +10,9 @@ R-brms
 R-caret
 R-colourpicker
 R-cowplot
+R-cpp11
 R-dendextend
 R-epiR
-R-fitdistrplus
 R-forecast
 R-ggjoy
 R-ggridges
@@ -22,6 +22,7 @@ R-joineRML
 R-lmerTest
 R-pdp
 R-plotly
+R-projpred
 R-rex
 R-rms
 R-robCompositions
