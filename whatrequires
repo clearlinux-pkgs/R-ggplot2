@@ -13,6 +13,7 @@ R-cowplot
 R-cpp11
 R-dendextend
 R-epiR
+R-forcats
 R-forecast
 R-ggjoy
 R-ggridges
@@ -21,17 +22,16 @@ R-hdrcde
 R-joineRML
 R-lmerTest
 R-pdp
+R-pillar
 R-plotly
 R-projpred
 R-rex
 R-rms
 R-robCompositions
 R-robustbase
-R-rsample
 R-rstan
 R-rstanarm
-R-shiny
+R-rstpm2
 R-shinystan
 R-tidyverse
-R-vcdExtra
 R-viridis
