@@ -12,7 +12,7 @@ R-colourpicker
 R-cowplot
 R-dendextend
 R-distributional
-R-forcats
+R-flexsurv
 R-forecast
 R-ggfortify
 R-ggjoy
@@ -20,6 +20,7 @@ R-ggrepel
 R-ggridges
 R-gridExtra
 R-hdrcde
+R-interp
 R-joineRML
 R-lmerTest
 R-mlr
