@@ -4,7 +4,7 @@
 #
 Name     : R-ggplot2
 Version  : 3.4.1
-Release  : 108
+Release  : 109
 URL      : https://cran.r-project.org/src/contrib/ggplot2_3.4.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/ggplot2_3.4.1.tar.gz
 Summary  : Create Elegant Data Visualisations Using the Grammar of Graphics
@@ -32,9 +32,6 @@ BuildRequires : R-tibble
 BuildRequires : R-vctrs
 BuildRequires : R-withr
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 Grammar of Graphics". You provide the data, tell 'ggplot2' how to map
@@ -50,10 +47,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1676048591
+export SOURCE_DATE_EPOCH=1678821564
 
 %install
-export SOURCE_DATE_EPOCH=1676048591
+export SOURCE_DATE_EPOCH=1678821564
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
