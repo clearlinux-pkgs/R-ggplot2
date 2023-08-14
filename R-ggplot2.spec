@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-ggplot2
-Version  : 3.4.2
-Release  : 113
-URL      : https://cran.r-project.org/src/contrib/ggplot2_3.4.2.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/ggplot2_3.4.2.tar.gz
+Version  : 3.4.3
+Release  : 114
+URL      : https://cran.r-project.org/src/contrib/ggplot2_3.4.3.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/ggplot2_3.4.3.tar.gz
 Summary  : Create Elegant Data Visualisations Using the Grammar of Graphics
 Group    : Development/Tools
 License  : MIT
@@ -41,16 +41,19 @@ Grammar of Graphics". You provide the data, tell 'ggplot2' how to map
 
 %prep
 %setup -q -n ggplot2
+pushd ..
+cp -a ggplot2 buildavx2
+popd
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1680553788
+export SOURCE_DATE_EPOCH=1692030998
 
 %install
-export SOURCE_DATE_EPOCH=1680553788
+export SOURCE_DATE_EPOCH=1692030998
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -88,6 +91,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
 R CMD check --no-manual --no-examples --no-codoc . || :
 
+/usr/bin/elf-move.py avx2 %{buildroot}-v3 %{buildroot} %{buildroot}/usr/share/clear/filemap/filemap-%{name}
 
 %files
 %defattr(-,root,root,-)
@@ -140,7 +144,6 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/ggplot2/html/R.css
 /usr/lib64/R/library/ggplot2/tests/testthat.R
 /usr/lib64/R/library/ggplot2/tests/testthat/Rplot001.png
-/usr/lib64/R/library/ggplot2/tests/testthat/Rplots.pdf
 /usr/lib64/R/library/ggplot2/tests/testthat/_snaps/aes-calculated.md
 /usr/lib64/R/library/ggplot2/tests/testthat/_snaps/aes.md
 /usr/lib64/R/library/ggplot2/tests/testthat/_snaps/aes/alpha-set-in-alpha.svg
@@ -443,6 +446,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/ggplot2/tests/testthat/_snaps/theme/titles-aligned-to-entire-plot.svg
 /usr/lib64/R/library/ggplot2/tests/testthat/_snaps/theme/width-is-3-times-height.svg
 /usr/lib64/R/library/ggplot2/tests/testthat/_snaps/utilities.md
+/usr/lib64/R/library/ggplot2/tests/testthat/helper-density.R
 /usr/lib64/R/library/ggplot2/tests/testthat/helper-facet.R
 /usr/lib64/R/library/ggplot2/tests/testthat/helper-plot-data.R
 /usr/lib64/R/library/ggplot2/tests/testthat/helper-vdiffr.R
