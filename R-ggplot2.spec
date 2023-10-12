@@ -4,10 +4,10 @@
 # Using build pattern: R
 #
 Name     : R-ggplot2
-Version  : 3.4.3
-Release  : 114
-URL      : https://cran.r-project.org/src/contrib/ggplot2_3.4.3.tar.gz
-Source0  : https://cran.r-project.org/src/contrib/ggplot2_3.4.3.tar.gz
+Version  : 3.4.4
+Release  : 115
+URL      : https://cran.r-project.org/src/contrib/ggplot2_3.4.4.tar.gz
+Source0  : https://cran.r-project.org/src/contrib/ggplot2_3.4.4.tar.gz
 Summary  : Create Elegant Data Visualisations Using the Grammar of Graphics
 Group    : Development/Tools
 License  : MIT
@@ -50,19 +50,19 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1692030998
+export SOURCE_DATE_EPOCH=1697125914
 
 %install
-export SOURCE_DATE_EPOCH=1692030998
+export SOURCE_DATE_EPOCH=1697125914
 rm -rf %{buildroot}
-export LANG=C.UTF-8
-export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
-export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
-export AR=gcc-ar
-export RANLIB=gcc-ranlib
-export LDFLAGS="$LDFLAGS  -Wl,-z -Wl,relro"
+LANG=C.UTF-8
+CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -O3 -flto -fno-semantic-interposition "
+FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -O3 -flto -fno-semantic-interposition "
+FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -O3 -flto -fno-semantic-interposition "
+CXXFLAGS="$CLEAR_INTERMEDIATE_CXXFLAGS -O3 -flto -fno-semantic-interposition "
+AR=gcc-ar
+RANLIB=gcc-ranlib
+LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS  -Wl,-z -Wl,relro"
 mkdir -p %{buildroot}/usr/lib64/R/library
 
 mkdir -p ~/.R
@@ -144,6 +144,7 @@ R CMD check --no-manual --no-examples --no-codoc . || :
 /usr/lib64/R/library/ggplot2/html/R.css
 /usr/lib64/R/library/ggplot2/tests/testthat.R
 /usr/lib64/R/library/ggplot2/tests/testthat/Rplot001.png
+/usr/lib64/R/library/ggplot2/tests/testthat/Rplots.pdf
 /usr/lib64/R/library/ggplot2/tests/testthat/_snaps/aes-calculated.md
 /usr/lib64/R/library/ggplot2/tests/testthat/_snaps/aes.md
 /usr/lib64/R/library/ggplot2/tests/testthat/_snaps/aes/alpha-set-in-alpha.svg
